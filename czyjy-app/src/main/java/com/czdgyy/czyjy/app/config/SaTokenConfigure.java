@@ -1,4 +1,4 @@
-package com.czdgyy.czyjy.admin.config;
+package com.czdgyy.czyjy.app.config;
 
 import cn.dev33.satoken.context.SaHolder;
 import cn.dev33.satoken.context.model.SaRequest;
@@ -7,7 +7,6 @@ import cn.dev33.satoken.interceptor.SaInterceptor;
 import cn.dev33.satoken.router.SaHttpMethod;
 import cn.dev33.satoken.router.SaRouter;
 import cn.dev33.satoken.stp.StpUtil;
-import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.StrUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
@@ -15,9 +14,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.util.Assert;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-import java.util.Collection;
-import java.util.List;
 
 import static com.czdgyy.czyjy.core.common.constants.SysConstants.ROLE_SUPER_ADMIN;
 

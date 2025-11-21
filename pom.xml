@@ -25,6 +25,8 @@
         <mybatis-flex.version>1.11.3</mybatis-flex.version>
         <sa-token.version>1.44.0</sa-token.version>
         <hutool.version>5.8.41</hutool.version>
+        <redisson.version>3.52.0</redisson.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
     </properties>
 
     <dependencyManagement>
@@ -44,6 +46,43 @@
                 <artifactId>czyjy-app</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mybatis-flex</groupId>
+                <artifactId>mybatis-flex-spring-boot3-starter</artifactId>
+                <version>${mybatis-flex.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mybatis-flex</groupId>
+                <artifactId>mybatis-flex-processor</artifactId>
+                <version>${mybatis-flex.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.mybatis-flex</groupId>
+                <artifactId>mybatis-flex-codegen</artifactId>
+                <version>${mybatis-flex.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-spring-boot3-starter</artifactId>
+                <version>${sa-token.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

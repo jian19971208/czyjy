@@ -18,7 +18,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Accessors(chain = true)
-public class QuerySysUserReqDto extends QueryOption {
+public class SysUserQueryReqDto extends QueryOption {
 
 	private List<Long> deptIdList;
 
@@ -59,7 +59,7 @@ public class QuerySysUserReqDto extends QueryOption {
 		queryWrapper
 				.in(SysUser::getDeptId, deptIdList, CollectionUtil.isNotEmpty(deptIdList))
 				.in(SysUser::getUsername, usernameList, CollectionUtil.isNotEmpty(usernameList))
-				.in(SysUser::getAdminStatusCode, adminStatusCodeList, CollectionUtil.isNotEmpty(adminStatusCodeList))
+				.in(SysUser::getAccountStatusCode, adminStatusCodeList, CollectionUtil.isNotEmpty(adminStatusCodeList))
 				.in(SysUser::getNickname, nicknameList, CollectionUtil.isNotEmpty(nicknameList))
 				.in(SysUser::getAvatar, avatarList, CollectionUtil.isNotEmpty(avatarList))
 				.in(SysUser::getPhone, phoneList, CollectionUtil.isNotEmpty(phoneList))

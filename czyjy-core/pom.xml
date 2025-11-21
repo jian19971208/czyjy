@@ -27,17 +27,12 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>${hutool.version}</version>
         </dependency>
         <dependency>
             <groupId>com.mysql</groupId>
@@ -47,23 +42,35 @@
         <dependency>
             <groupId>com.mybatis-flex</groupId>
             <artifactId>mybatis-flex-spring-boot3-starter</artifactId>
-            <version>${mybatis-flex.version}</version>
         </dependency>
         <dependency>
             <groupId>com.mybatis-flex</groupId>
             <artifactId>mybatis-flex-processor</artifactId>
-            <version>${mybatis-flex.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.mybatis-flex</groupId>
             <artifactId>mybatis-flex-codegen</artifactId>
-            <version>${mybatis-flex.version}</version>
         </dependency>
         <dependency>
             <groupId>cn.dev33</groupId>
             <artifactId>sa-token-spring-boot3-starter</artifactId>
-            <version>${sa-token.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
         </dependency>
     </dependencies>
 

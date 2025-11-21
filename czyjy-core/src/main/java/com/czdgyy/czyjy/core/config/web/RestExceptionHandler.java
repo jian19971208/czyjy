@@ -3,6 +3,7 @@ package com.czdgyy.czyjy.core.config.web;
 import cn.dev33.satoken.exception.NotLoginException;
 import com.czdgyy.czyjy.core.common.response.ResponseResult;
 import com.czdgyy.czyjy.core.exception.BaseException;
+import com.mybatisflex.core.exception.MybatisFlexException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,14 +29,14 @@ public class RestExceptionHandler {
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<ResponseResult<Void>> handleException(Exception ex) {
 		log.error("未知异常", ex);
-		return new ResponseEntity<>(ResponseResult.fail(), HttpStatus.OK);
+		return new ResponseEntity<>(ResponseResult.failed(SERVER_ERROR, ex.getMessage()), HttpStatus.OK);
 	}
 
 	//处理基础异常
 	@ExceptionHandler(BaseException.class)
 	public ResponseEntity<ResponseResult<Void>> handleBaseException(BaseException ex) {
 		log.error("基础异常: {}", ex.getMessage());
-		return new ResponseEntity<>(ResponseResult.failed(SERVER_ERROR, ex.getMessage()), HttpStatus.OK);
+		return new ResponseEntity<>(ResponseResult.failed(ex, ex.getMessage()), HttpStatus.OK);
 	}
 
 	// 处理 @Validated 校验异常（参数校验失败）

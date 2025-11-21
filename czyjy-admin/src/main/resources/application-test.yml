@@ -17,9 +17,17 @@ spring:
       idle-timeout: 25000
       auto-commit: true
       connection-test-query: SELECT 1
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: Jian19980106.
+      database: 0
+      timeout: 3s
 logging:
   config: classpath:logback/logback-test.xml
 sa-token:
+  # token的名称
   token-name: Authorization
   # 七天有效期
   timeout: -1

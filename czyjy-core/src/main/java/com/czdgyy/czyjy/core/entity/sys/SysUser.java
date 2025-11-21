@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 /**
  * 系统用户表
- * @author Administrator
+ * @author lcj
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
