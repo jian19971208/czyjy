@@ -1,0 +1,35 @@
+spring:
+  main:
+    allow-circular-references: true
+  application:
+    name: czyjy-admin
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
+  datasource:
+    url: jdbc:mysql://rm-wz9f255gx2492m4698o.mysql.rds.aliyuncs.com:3306/czyjy?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: Jian19980106!
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 200
+      idle-timeout: 25000
+      auto-commit: true
+      connection-test-query: SELECT 1
+logging:
+  config: classpath:logback/logback-test.xml
+sa-token:
+  token-name: Authorization
+  # 七天有效期
+  timeout: -1
+  # 是否允许同一账号多地同时登录 （为 true 时允许一起登录, 为 false 时新登录挤掉旧登录）
+  is-concurrent: true
+  # 在多人登录同一账号时，是否共用一个 token （为 true 时所有登录共用一个 token, 为 false 时每次登录新建一个 token）
+  is-share: true
+  # 是否输出操作日志
+  is-log: true
+  # 是否尝试从 cookie 里读取 Token，此值为 false 后，StpUtil.login(id) 登录时也不会再往前端注入Cookie
+  is-read-cookie: false
+
+
