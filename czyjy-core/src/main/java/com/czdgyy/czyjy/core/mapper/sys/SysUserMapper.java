@@ -2,6 +2,7 @@ package com.czdgyy.czyjy.core.mapper.sys;
 
 import com.czdgyy.czyjy.core.entity.sys.SysUser;
 import com.mybatisflex.core.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * @author lcj

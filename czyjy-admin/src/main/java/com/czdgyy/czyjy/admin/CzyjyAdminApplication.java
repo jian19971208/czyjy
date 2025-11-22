@@ -1,6 +1,7 @@
 package com.czdgyy.czyjy.admin;
 
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
@@ -8,6 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2025/11/21/周五
  */
 @SpringBootApplication(scanBasePackages = "com.czdgyy.czyjy")
-@MapperScan("com.czdgyy.czyjy.core.mapper")
+@MapperScan(basePackages = "com.czdgyy.czyjy.core.mapper")
 public class CzyjyAdminApplication {
+    static void main(String[] args) {
+        SpringApplication.run(CzyjyAdminApplication.class, args);
+    }
 }

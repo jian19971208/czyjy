@@ -27,6 +27,7 @@
         <hutool.version>5.8.41</hutool.version>
         <redisson.version>3.52.0</redisson.version>
         <mapstruct.version>1.6.3</mapstruct.version>
+        <hikari.version>5.0.1</hikari.version>
     </properties>
 
     <dependencyManagement>
@@ -66,6 +67,11 @@
                 <groupId>com.mybatis-flex</groupId>
                 <artifactId>mybatis-flex-codegen</artifactId>
                 <version>${mybatis-flex.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${hikari.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.dev33</groupId>

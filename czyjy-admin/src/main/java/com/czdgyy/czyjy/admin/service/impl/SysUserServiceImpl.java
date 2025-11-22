@@ -26,6 +26,7 @@ import com.czdgyy.czyjy.core.exception.BaseException;
 import com.czdgyy.czyjy.core.helper.RequestHelper;
 import com.czdgyy.czyjy.core.repository.sys.*;
 import com.mybatisflex.core.paginate.Page;
+import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -48,7 +49,7 @@ import static com.czdgyy.czyjy.core.utils.FunctionUtil.*;
 public class SysUserServiceImpl implements SysUserService {
 
     private final SysUserRepository sysUserRepository;
-    private final SysUserConvert sysUserConvert;
+    private SysUserConvert sysUserConvert;
     private final SysRoleRepository sysRoleRepository;
     private final SysRolePermissionRepository sysRolePermissionRepository;
     private final SysPermissionRepository sysPermissionRepository;
