@@ -22,8 +22,11 @@ public class RedissonConfig {
 	@Value("${spring.data.redis.port}")
 	private Integer port;
 
-	@Value("${spring.data.redis.password:}")
+	@Value("${spring.data.redis.password}")
 	private String password;
+
+    @Value("${spring.data.redis.database}")
+    private Integer database;
 
 	@Bean
 	public RedissonClient redissonClient() {
@@ -32,7 +35,7 @@ public class RedissonConfig {
 		String address = "redis://" + host + ":" + port;
 		SingleServerConfig serverConfig = config.useSingleServer()
 				.setAddress(address)
-				.setDatabase(0);
+				.setDatabase(database);
 
 		if (StrUtil.isNotBlank(password)) {
 			serverConfig.setPassword(password);

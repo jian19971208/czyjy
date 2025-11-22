@@ -1,7 +1,9 @@
-package com.czdgyy.czyjy.core.convert;
+package com.czdgyy.czyjy.core.convert.sys;
 
 
 import com.czdgyy.czyjy.core.dto.req.sys.SysUserAddReqDto;
+import com.czdgyy.czyjy.core.dto.req.sys.SysUserUpdateReqDto;
+import com.czdgyy.czyjy.core.dto.res.sys.SysUserLoginResDto;
 import com.czdgyy.czyjy.core.entity.sys.SysUser;
 import org.mapstruct.Mapper;
 
@@ -13,4 +15,8 @@ import org.mapstruct.Mapper;
 public interface SysUserConvert {
 
 	SysUser addReqDtoToEntity(SysUserAddReqDto reqDto);
+
+    SysUser updateReqDtoToEntity(SysUserUpdateReqDto req);
+
+    SysUserLoginResDto.UserResDto entityToLoginUserResDto(SysUser sysUser);
 }

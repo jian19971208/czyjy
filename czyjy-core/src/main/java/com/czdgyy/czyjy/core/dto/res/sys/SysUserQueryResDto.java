@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class QuerySysUserResDto extends CommonResult {
+public class SysUserQueryResDto extends CommonResult {
 	/**
 	 * 角色ID
 	 */

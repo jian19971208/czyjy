@@ -1,33 +1,26 @@
 package com.czdgyy.czyjy.core.dto.req.sys;
 
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-
-import java.time.LocalDateTime;
 
 /**
  * @author lcj
  * @since 2025/11/21/周五
  */
 @Data
-public class SysUserAddReqDto {
-	/**
-	 * 用户名
-	 */
-	@NotEmpty(message = "用户名不能为空")
-	private String username;
+public class SysUserUpdateReqDto {
+
+    @NotNull(message = "用户ID不能为空")
+    private Long userId;
 
 	/**
 	 * 密码
 	 */
-	@NotEmpty(message = "密码不能为空")
 	private String password;
 
 	/**
 	 * 角色ID
 	 */
-    @NotNull(message = "必须设置角色")
 	private Long roleId;
 
 	/**

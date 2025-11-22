@@ -7,7 +7,7 @@ import lombok.Getter;
  * @since 2025/11/21/周五
  */
 @Getter
-public enum CommonStatusEnum {
+public enum CommonStatusEnum implements BaseEnum {
 
 	/**
 	 * 禁用

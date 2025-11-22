@@ -13,4 +13,6 @@ public interface WebConstants {
 	String APP_WEB_PATH = "/app/";
 
 	String TRACE = "traceId";
+
+    String HEADER_FORWARDED = "X-Forwarded-For";
 }

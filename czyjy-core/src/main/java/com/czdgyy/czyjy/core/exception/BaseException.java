@@ -13,6 +13,12 @@ public class BaseException extends RuntimeException implements ResponseCode {
 
 	private final String message;
 
+    public BaseException(CommonResponseCode commonResponseCode) {
+        super(commonResponseCode.getMessage());
+        this.code = commonResponseCode.getCode();
+        this.message = commonResponseCode.getMessage();
+    }
+
 	public BaseException(Integer code, String message) {
 		super(message);
 		this.code = code;

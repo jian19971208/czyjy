@@ -11,6 +11,7 @@ public enum CommonResponseCode implements ResponseCode {
 
 	SUCCESS(200, "成功"),
 	UNAUTHORIZED(401, "未授权，请登录"),
+    FORBIDDEN(403, "无权限访问"),
 	SERVER_ERROR(500, "服务异常")
 	;
 

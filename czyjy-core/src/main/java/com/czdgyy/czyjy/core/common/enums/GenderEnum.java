@@ -7,7 +7,7 @@ import lombok.Getter;
  * @since 2025/11/21/周五
  */
 @Getter
-public enum GenderEnum {
+public enum GenderEnum implements BaseEnum {
 
 	/**
 	 * 男
