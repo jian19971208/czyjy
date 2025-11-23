@@ -6,11 +6,11 @@ package com.czdgyy.czyjy.core.common.constants;
  */
 public interface WebConstants {
 
-	String PAGE_WEB_PATH = "/pages/";
+	String WEB_PAGE_PATH = "/pages/";
 
-	String ADMIN_WEB_PATH = "/admin/";
+	String WEB_ADMIN_PATH = "/admin/";
 
-	String APP_WEB_PATH = "/app/";
+	String WEB_APP_PATH = "/app/";
 
 	String TRACE = "traceId";
 

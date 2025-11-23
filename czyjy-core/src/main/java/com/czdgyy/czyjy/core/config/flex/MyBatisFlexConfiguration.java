@@ -3,6 +3,9 @@ package com.czdgyy.czyjy.core.config.flex;
 import com.mybatisflex.annotation.KeyType;
 import com.mybatisflex.core.FlexGlobalConfig;
 import com.mybatisflex.core.keygen.KeyGenerators;
+import com.mybatisflex.core.logicdelete.LogicDeleteProcessor;
+import com.mybatisflex.core.logicdelete.impl.DefaultLogicDeleteProcessor;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -13,15 +16,6 @@ import org.springframework.context.annotation.Configuration;
 public class MyBatisFlexConfiguration {
 
 	public MyBatisFlexConfiguration() {
-		//配置主键策略
-		FlexGlobalConfig.KeyConfig keyConfig = new FlexGlobalConfig.KeyConfig();
-		keyConfig.setKeyType(KeyType.Generator);
-		keyConfig.setValue(KeyGenerators.flexId);
-		FlexGlobalConfig.getDefaultConfig().setKeyConfig(keyConfig);
-		//配置逻辑删除
-		FlexGlobalConfig.getDefaultConfig().setLogicDeleteColumn("is_deleted");
-		//配置乐观锁
-		FlexGlobalConfig.getDefaultConfig().setVersionColumn("version");
 		//配置插入监听
 		DefaultInsertListener insertListener = new DefaultInsertListener();
 		FlexGlobalConfig.getDefaultConfig().registerInsertListener(insertListener);
@@ -29,4 +23,9 @@ public class MyBatisFlexConfiguration {
 		DefaultUpdateListener updateListener = new DefaultUpdateListener();
 		FlexGlobalConfig.getDefaultConfig().registerUpdateListener(updateListener);
 	}
+
+    @Bean
+    public LogicDeleteProcessor logicDeleteProcessor() {
+        return new DefaultLogicDeleteProcessor();
+    }
 }

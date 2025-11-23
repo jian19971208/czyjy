@@ -1,6 +1,6 @@
-package com.czdgyy.czyjy.admin.controller.sys;
+package com.czdgyy.czyjy.admin.controller.web.sys;
 
-import com.czdgyy.czyjy.admin.service.SysUserService;
+import com.czdgyy.czyjy.admin.service.iface.sys.SysUserService;
 import com.czdgyy.czyjy.core.common.response.ResponseResult;
 import com.czdgyy.czyjy.core.dto.req.sys.SysUserAddReqDto;
 import com.czdgyy.czyjy.core.dto.req.sys.SysUserLoginReqDto;
@@ -11,10 +11,9 @@ import com.czdgyy.czyjy.core.dto.res.sys.SysUserQueryResDto;
 import com.mybatisflex.core.paginate.Page;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import static com.czdgyy.czyjy.core.common.constants.WebConstants.ADMIN_WEB_PATH;
+import static com.czdgyy.czyjy.core.common.constants.WebConstants.WEB_ADMIN_PATH;
 
 /**
  * @author lcj
@@ -22,7 +21,7 @@ import static com.czdgyy.czyjy.core.common.constants.WebConstants.ADMIN_WEB_PATH
  */
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(ADMIN_WEB_PATH + "/sys/user")
+@RequestMapping(WEB_ADMIN_PATH + "/sys/user")
 public class SysUserController {
 
 	private final SysUserService sysUserService;

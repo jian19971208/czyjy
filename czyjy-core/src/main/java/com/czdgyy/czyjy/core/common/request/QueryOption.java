@@ -1,10 +1,12 @@
 package com.czdgyy.czyjy.core.common.request;
 
+import cn.hutool.core.collection.CollectionUtil;
 import com.mybatisflex.core.paginate.Page;
 import com.mybatisflex.core.query.QueryWrapper;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author lcj
@@ -24,6 +26,10 @@ public class QueryOption {
 	 * 排序字段
 	 */
 	private List<OrderField> orderFieldList;
+    /**
+     * 扩展查询参数
+     */
+    private Map<String, Object> extraQueryMap;
 
 	public <T> Page<T> toPage() {
 		return Page.of(current, size);
@@ -31,12 +37,19 @@ public class QueryOption {
 
 	public QueryWrapper getOrderQuery() {
 		QueryWrapper queryWrapper = QueryWrapper.create();
-		if (orderFieldList != null) {
+		if (CollectionUtil.isNotEmpty(orderFieldList)) {
 			for (OrderField orderField : orderFieldList) {
 				queryWrapper.orderBy(orderField.getFieldName(), Boolean.TRUE.equals(orderField.getAscFlag()));
 			}
 		}
 		return queryWrapper;
 	}
+
+    @Data
+    public static class AdvancedQuery {
+        private String fieldName;
+        private Object value;
+        private String operator;
+    }
 
 }

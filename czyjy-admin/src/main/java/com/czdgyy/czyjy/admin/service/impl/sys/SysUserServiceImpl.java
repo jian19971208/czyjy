@@ -1,10 +1,10 @@
-package com.czdgyy.czyjy.admin.service.impl;
+package com.czdgyy.czyjy.admin.service.impl.sys;
 
 import cn.dev33.satoken.stp.StpUtil;
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.digest.BCrypt;
-import com.czdgyy.czyjy.admin.service.SysUserService;
+import com.czdgyy.czyjy.admin.service.iface.sys.SysUserService;
 import com.czdgyy.czyjy.core.common.enums.BaseEnum;
 import com.czdgyy.czyjy.core.common.enums.CommonStatusEnum;
 import com.czdgyy.czyjy.core.common.enums.GenderEnum;
@@ -26,7 +26,6 @@ import com.czdgyy.czyjy.core.exception.BaseException;
 import com.czdgyy.czyjy.core.helper.RequestHelper;
 import com.czdgyy.czyjy.core.repository.sys.*;
 import com.mybatisflex.core.paginate.Page;
-import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -49,7 +48,7 @@ import static com.czdgyy.czyjy.core.utils.FunctionUtil.*;
 public class SysUserServiceImpl implements SysUserService {
 
     private final SysUserRepository sysUserRepository;
-    private SysUserConvert sysUserConvert;
+    private final SysUserConvert sysUserConvert;
     private final SysRoleRepository sysRoleRepository;
     private final SysRolePermissionRepository sysRolePermissionRepository;
     private final SysPermissionRepository sysPermissionRepository;
