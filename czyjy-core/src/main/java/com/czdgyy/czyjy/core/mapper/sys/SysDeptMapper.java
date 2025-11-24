@@ -12,3 +12,4 @@ public interface SysDeptMapper extends BaseMapper<SysDept> {
 }
 
 
+
