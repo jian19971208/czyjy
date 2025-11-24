@@ -9,6 +9,9 @@ import com.mybatisflex.core.table.TableInfo;
 
 import static com.mybatisflex.core.constant.SqlConsts.EQUALS;
 
+/**
+ * @author lcj
+ */
 public class DefaultDeleteProcessor extends AbstractLogicDeleteProcessor {
 
     @Override

@@ -4,6 +4,7 @@ import com.czdgyy.czyjy.admin.service.iface.sys.SysRoleService;
 import com.czdgyy.czyjy.admin.service.iface.sys.SysUserService;
 import com.czdgyy.czyjy.core.common.response.ResponseResult;
 import com.czdgyy.czyjy.core.dto.req.sys.SysRoleAddReqDto;
+import com.czdgyy.czyjy.core.dto.req.sys.SysRoleQueryReqDto;
 import com.czdgyy.czyjy.core.dto.res.sys.SysRoleQueryResDto;
 import com.mybatisflex.core.paginate.Page;
 import jakarta.validation.Valid;
@@ -16,6 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import static com.czdgyy.czyjy.core.common.constants.WebConstants.WEB_ADMIN_PATH;
 
+/**
+ * @author lcj
+ */
 @Slf4j
 @RestController
 @RequiredArgsConstructor

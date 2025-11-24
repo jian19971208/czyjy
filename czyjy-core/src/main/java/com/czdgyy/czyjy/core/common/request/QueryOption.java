@@ -35,7 +35,7 @@ public class QueryOption {
 		return Page.of(current, size);
 	}
 
-	public QueryWrapper getOrderQuery() {
+	public QueryWrapper getDefaultQuery() {
 		QueryWrapper queryWrapper = QueryWrapper.create();
 		if (CollectionUtil.isNotEmpty(orderFieldList)) {
 			for (OrderField orderField : orderFieldList) {

@@ -55,7 +55,7 @@ public class SysUserQueryReqDto extends QueryOption {
 	private List<Long> updaterIdList;
 
 	public QueryWrapper toQuery() {
-		QueryWrapper queryWrapper = this.getOrderQuery();
+		QueryWrapper queryWrapper = this.getDefaultQuery();
 		queryWrapper
 				.in(SysUser::getDeptId, deptIdList, CollectionUtil.isNotEmpty(deptIdList))
 				.in(SysUser::getUsername, usernameList, CollectionUtil.isNotEmpty(usernameList))

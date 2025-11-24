@@ -18,7 +18,7 @@ public class SysRoleQueryReqDto extends QueryOption {
     private List<String> roleNameList;
 
     public QueryWrapper toQuery() {
-        QueryWrapper queryWrapper = this.getOrderQuery();
+        QueryWrapper queryWrapper = this.getDefaultQuery();
 
     }
 }
