@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;
 
 import java.io.IOException;
+import java.io.Serial;
 import java.util.Objects;
 
 /**
@@ -13,6 +14,7 @@ import java.util.Objects;
  */
 public class ClearPointSerializer extends StdScalarSerializer<Number> {
 
+    @Serial
     private static final long serialVersionUID = -1404070010013282747L;
 
     protected ClearPointSerializer(Class<Number> t) {

@@ -1,4 +1,4 @@
-package com.czdgyy.czyjy.core.config.currency;
+package com.czdgyy.czyjy.core.config.thread;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
